@@ -28,6 +28,15 @@ void loop() {
   Serial.print(" cm/ ");
   Serial.print(distanceInch);
   Serial.println(" in");
-  delay(1000);
 
+  if (distanceCm < 6){
+    digitalWrite(2, HIGH);
+    digitalWrite(4, LOW);
+  }
+  else{
+    digitalWrite(2, LOW);
+    digitalWrite(4, HIGH);
+  }
+
+  delay(1000);
 }
